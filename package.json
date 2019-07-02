@@ -1,0 +1,25 @@
+{
+  "name": "jenkins-npm-semver-release",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"All code is guilty, until proven innocent.\"",
+    "build": "echo \"We build too many walls and not enough bridges.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonaslalin/jenkins-npm-semver-release.git"
+  },
+  "author": "Jonas Lalin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonaslalin/jenkins-npm-semver-release/issues"
+  },
+  "homepage": "https://github.com/jonaslalin/jenkins-npm-semver-release#readme",
+  "publishConfig": {
+    "registry": "https://my-internal-registry.local/"
+  }
+}
