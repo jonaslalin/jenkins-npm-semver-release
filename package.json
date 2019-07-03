@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/jonaslalin/jenkins-npm-semver-release/issues"
   },
-  "homepage": "https://github.com/jonaslalin/jenkins-npm-semver-release#readme",
-  "publishConfig": {
-    "registry": "https://my-internal-registry.local/"
-  }
+  "homepage": "https://github.com/jonaslalin/jenkins-npm-semver-release#readme"
 }

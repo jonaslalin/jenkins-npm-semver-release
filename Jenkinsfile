@@ -24,7 +24,14 @@ podTemplate(
         }
 
         stage("Install") {
-            sh("npm ci")
+            withEnv([
+                "http_proxy=http://my-proxy.example.com:8080",
+                "https_proxy=http://my-proxy.example.com:8080",
+                "no_proxy=*.example.com",
+                "npm_config_registry=https://registry.npmjs.org/"
+            ]) {
+                sh("npm ci")
+            }
         }
 
         stage("Test") {
@@ -56,6 +63,7 @@ podTemplate(
                     string(credentialsId: "npm-secret", variable: "NPM_SECRET")
                 ]) {
                     withEnv([
+                        "npm_config_registry=https://my-registry.example.com/",
                         "npm_config__auth=${env.NPM_SECRET}",
                         "npm_config_email=youremail@email.com",
                         "npm_config_always_auth=true"
